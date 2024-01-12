@@ -8,19 +8,34 @@
 		<mct:StatusBarBehavior StatusBarColor="Black" StatusBarStyle="DarkContent" />
 	</Page.Behaviors>
 	<ScrollView BackgroundColor="Black">
-        <VerticalStackLayout
-            Spacing="0"
-            Padding="0,0"
-            VerticalOptions="Center" HorizontalOptions="Center">
-
-            <Label
+        <VerticalStackLayout>
+			<HorizontalStackLayout>
+				<Label
+                x:Name="Temperature"
+                Text="000°"
+                FontSize="80"
+                HeightRequest="100"
+                Margin="120,-20,0,0"
+                TextColor="Red" />
+				<Label
+                x:Name="CurrentDate"
+                Text="Day of Week ??/??/????"
+                FontSize="50"
+                HeightRequest="75"
+                Margin="375,0,0,0"
+                TextColor="Red" />
+			</HorizontalStackLayout>
+			<Label
                 x:Name="MainClock"
                 Text="hey"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="300"
-                HorizontalOptions="CenterAndExpand" WidthRequest="850" Margin="35,10,1,10" TextColor="Red" />
+                FontSize="325"
+                HeightRequest="350"
+                Margin="0,-30,0,0"
+                HorizontalOptions="CenterAndExpand"
+                TextColor="Red" />
 
-        </VerticalStackLayout>
+		</VerticalStackLayout>
     </ScrollView>
 
 </ContentPage>

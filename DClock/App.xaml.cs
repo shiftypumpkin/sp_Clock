@@ -2,10 +2,12 @@
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
+    public App(IServiceProvider serviceProvider)
+    {
+        this.InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+        var mainPage = serviceProvider.GetRequiredService<MainPage>();
+        
+        this.MainPage = new NavigationPage(mainPage);
+    }
 }
